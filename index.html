@@ -8,10 +8,12 @@
 </head>
 <body>
   <header>
-    <button id="hamburguer_menu"></button>
+    <button id="hamburguer_menu">
+      <div class="decoration"></div>
+    </button>
     <nav>
       <ul>
-        <li><a href="/" class="selected">Clock</a></li>
+        <li><a href="/" class="selected" tabindex="-1">Clock</a></li>
         <li><a href="/">Stopwatch</a></li>
         <li><a href="/">Timer</a></li>
       </ul>
@@ -30,12 +32,14 @@
   </main>
   <footer>
     <span class="rights">© Todos los derechos reservados</span>
-    <ul>
-      <li><img src="" alt="Github"></li>
-      <li><img src="" alt="Twitter"></li>
-      <li><img src="" alt="LinkedIn"></li>
-      <li><img src="" alt="Saky.Dev"></li>
-    </ul>
+    <div class="contact">
+      <ul>
+        <li><a href=""><img src="" alt="Github"></a></li>
+        <li><a href=""><img src="" alt="Twitter"></a></li>
+        <li><a href=""><img src="" alt="LinkedIn"></a></li>
+        <li><a href=""><img src="" alt="Saky.Dev"></a></li>
+      </ul>
+    </div>
   </footer>
   <script src="./scripts/index.js"></script>
 </body>
