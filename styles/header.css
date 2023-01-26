@@ -1,56 +1,64 @@
 @media (orientation: landscape) {
-  button#hamburguer_menu {
+  header button#hamburguer_menu {
     display: none;
+  }
+  header nav {
+    position: unset;
+    height: inherit;
+    width: calc(100vw / 3 + 100px);
   }
   header nav ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: inherit;
   }
 }
 @media (orientation: landscape) and (min-device-width: 320px) {
-  header nav {
-    width: 90%;
-  }
   header nav ul li a {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
 @media (orientation: landscape) and (min-device-width: 481px) {
-  header nav {
-    width: 75%;
-  }
   header nav ul li a {
     font-size: 0.9em;
   }
 }
 @media (orientation: landscape) and (min-device-width: 769px) {
-  header nav {
-    width: 60%;
-  }
   header nav ul li a {
-    font-size: 0.95em;
+    font-size: 1em;
   }
 }
 @media (orientation: landscape) and (min-device-width: 1025px) {
-  header nav {
-    width: 45%;
-  }
   header nav ul li a {
     font-size: 1em;
   }
 }
 @media (orientation: landscape) and (min-device-width: 1201px) {
-  header nav {
-    width: 30%;
-  }
   header nav ul li a {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 }
 @media (orientation: portrait) {
-  button#hamburguer_menu {
+  header button#hamburguer_menu {
     display: flex;
+  }
+  header nav {
+    position: absolute;
+    outline: 2px solid var(--clr_contrast);
+    top: calc(4vw + 50px);
+    left: 15px;
+    border-radius: 5px;
+    padding: 10px 5px;
+    width: calc(100% / 5 + 100px);
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2px;
+    
   }
 }
 header {
@@ -60,14 +68,26 @@ header {
   display: flex;
   align-content: center;
   justify-content: center;
+  position: relative;
+}
+header button#hamburguer_menu {
+  position: absolute;
+  width: calc(4vw + 6px);
+  height: calc(4vw + 6px);
+  min-width: 34px;
+  min-height: 34px;
+  top: 15px;
+  left: 15px;
+  outline: 2px solid var(--clr_contrast);
+  border-radius: 5px;
+  border: none;
+  background: none;
 }
 header nav {
-  height: inherit;
   display: flex;
 }
 header nav ul {
   display: flex;
-  height: inherit;
 }
 header nav  ul li a {
   font-weight: 300;
