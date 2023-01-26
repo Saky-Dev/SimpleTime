@@ -13,44 +13,36 @@
     align-items: center;
     height: inherit;
   }
-}
-@media (orientation: landscape) and (min-device-width: 320px) {
   header nav ul li a {
-    font-size: 0.9em;
-  }
-}
-@media (orientation: landscape) and (min-device-width: 481px) {
-  header nav ul li a {
-    font-size: 0.9em;
-  }
-}
-@media (orientation: landscape) and (min-device-width: 769px) {
-  header nav ul li a {
-    font-size: 1em;
-  }
-}
-@media (orientation: landscape) and (min-device-width: 1025px) {
-  header nav ul li a {
-    font-size: 1em;
-  }
-}
-@media (orientation: landscape) and (min-device-width: 1201px) {
-  header nav ul li a {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 }
 @media (orientation: portrait) {
   header button#hamburguer_menu {
     display: flex;
   }
+  header button#hamburguer_menu.visible + nav {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  header button#hamburguer_menu.hidden + nav {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+  }
   header nav {
     position: absolute;
+    background: var(--clr_background);
     outline: 2px solid var(--clr_contrast);
     top: calc(4vw + 50px);
     left: 15px;
     border-radius: 5px;
     padding: 10px 5px;
     width: calc(100% / 5 + 100px);
+    height: fit-content;
+    transform-origin: top left;
+    transition: 0.3s ease;
   }
   header nav ul {
     display: flex;
@@ -82,6 +74,52 @@ header button#hamburguer_menu {
   border-radius: 5px;
   border: none;
   background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header button#hamburguer_menu div.decoration {
+  width: 70%;
+  height: calc(100% / 12);
+  background: var(--clr_contrast);
+  border-radius: 5px;
+  position: relative;
+  transition: 0.3s ease;
+}
+header button#hamburguer_menu.visible div.decoration {
+  background: var(--clr_background);
+}
+header button#hamburguer_menu.hidden div.decoration {
+  background: var(--clr_contrast);
+}
+header button#hamburguer_menu div.decoration::before,
+header button#hamburguer_menu div.decoration::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: var(--clr_contrast);
+  border-radius: 5px;
+  left: 0;
+  transition: 0.3s ease;
+}
+header button#hamburguer_menu.visible div.decoration::before,
+header button#hamburguer_menu.visible div.decoration::after {
+  top: 0;
+  bottom: 0;
+}
+header button#hamburguer_menu.visible div.decoration::before {
+  rotate: 45deg;
+}
+header button#hamburguer_menu.visible div.decoration::after {
+  rotate: -45deg;
+}
+header button#hamburguer_menu.hidden div.decoration::before {
+  bottom: 240%;
+}
+header button#hamburguer_menu.hidden div.decoration::after {
+  top: 240%;
 }
 header nav {
   display: flex;
