@@ -4,11 +4,23 @@
   main {
     max-width: calc(30% + 60px);
   }
+  main h1#page_title {
+    font-size: 2.2em;
+  }
+  main h2#page_subtitle {
+    font-size: 1em;
+  }
 }
 
 @media (orientation: portrait) {
   main {
-    max-width: calc(60% + 100px);
+    max-width: calc(40% + 100px);
+  }
+  main h1#page_title {
+    font-size: 1.8em;
+  }
+  main h2#page_subtitle {
+    font-size: 0.9em;
   }
 }
 
@@ -50,16 +62,14 @@ main {
 }
 main h1#page_title {
   color: var(--clr_main);
-  font-size: 2.6em;
   font-weight: 700;
 }
 main h2#page_subtitle {
   color: var(--clr_contrast);
-  font-size: 1.05em;
   font-weight: 300;
 }
 main div.time {
   margin: 1vh 0;
-  width: 100%;
+  width: fit-content;
   border-top: 3px solid var(--clr_main);
 }
