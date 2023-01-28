@@ -26,5 +26,51 @@ main div.time span#midday.visible {
 }
 main div.time span#midday.hidden {
   visibility: hidden;
+  opacity: 0;
+}
+main div.tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+main div.tools button#switch {
+  width: 60px;
+  height: 26px;
+  border: none;
+  border: 2px solid var(--clr_contrast);
+  border-radius: 20px;
+  position: relative;
+}
+main div.tools button#switch.off {
+  background: var(--clr_background);
+}
+main div.tools button#switch.on {
+  background: var(--clr_second);
+}
+main div.tools button#switch::after {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  content: '';
+  background: var(--clr_contrast);
+  border-radius: 50%;
+  top: 4px;
+  transition: 0.3s ease;
+}
+main div.tools button#switch.off::after {
+  left: 4px;
+}
+main div.tools button#switch.on::after {
+  left: calc(100% - 18px);
+}
+main div.tools button#switch + label[for="switch"] {
+  font-size: 1.1em;
+  transition: 0.3s ease;
+}
+main div.tools button#switch.off + label[for="switch"] {
+  opacity: 0.4;
+}
+main div.tools button#switch.on + label[for="switch"] {
   opacity: 1;
 }

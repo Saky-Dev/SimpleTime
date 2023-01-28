@@ -59,6 +59,7 @@ main h2#page_subtitle {
   font-weight: 300;
 }
 main div.time {
-  margin-top: 1vh;
+  margin: 1vh 0;
+  width: 100%;
   border-top: 3px solid var(--clr_main);
 }
