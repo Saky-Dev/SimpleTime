@@ -1,3 +1,26 @@
+@media (orientation: landscape) {
+  footer div.contact {
+    width: calc(30% + 40px);
+  }
+  footer div.contact ul li a img {
+    width: 3.6vh;
+    height: 3.6vh;
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+@media (orientation: portrait) {
+  footer div.contact {
+    width: calc(50% + 40px);
+  }
+  footer div.contact ul li a img {
+    width: 3vh;
+    height: 3vh;
+    min-width: 26px;
+    min-height: 26px;
+  }
+}
+
 footer {
   width: 100%;
   height: fit-content;
@@ -11,7 +34,6 @@ footer div.contact {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
   height: fit-content;
 }
 footer div.contact ul {
@@ -21,11 +43,16 @@ footer div.contact ul {
   width: 100%;
   height: fit-content;
 }
+footer div.contact ul li a:focus,
+footer div.contact ul li a:hover {
+  outline: none;
+}
 footer div.contact ul li a img {
-  width: 3.6vh;
-  height: 3.6vh;
-  min-width: 24px;
-  min-height: 24px;
   filter: brightness(0) invert(1);
   opacity: 0.4;
+  transition: 0.3s ease;
+}
+footer div.contact ul li a:hover img,
+footer div.contact ul li a:focus img {
+  opacity: 0.9;
 }

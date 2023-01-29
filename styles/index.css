@@ -64,6 +64,11 @@ main div.tools button#switch {
   border-radius: 20px;
   position: relative;
 }
+main div.tools button#switch:hover,
+main div.tools button#switch:focus {
+  outline: none;
+  box-shadow: 0px 0px 3px 0.6px var(--clr_contrast);
+}
 main div.tools button#switch.off {
   background: var(--clr_background);
 }
