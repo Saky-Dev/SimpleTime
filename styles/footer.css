@@ -1,0 +1,31 @@
+footer {
+  width: 100%;
+  height: fit-content;
+  padding: 0 10px 10px 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+footer div.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: fit-content;
+}
+footer div.contact ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+}
+footer div.contact ul li a img {
+  width: 3.6vh;
+  height: 3.6vh;
+  min-width: 24px;
+  min-height: 24px;
+  filter: brightness(0) invert(1);
+  opacity: 0.4;
+}
