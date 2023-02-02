@@ -31,12 +31,12 @@ main div.time {
   position: relative;
 }
 main div.time span#clock {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Inconsolata', monospace;
   font-weight: 700;
 }
 main div.time span#midday {
   position: absolute;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Inconsolata', monospace;
   bottom: 0;
   left: calc(100% + 10px);
   font-weight: 300;
